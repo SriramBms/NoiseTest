@@ -6,4 +6,5 @@
     <color name="colorLight">#E4D39E</color>
     <color name="colorLighter">#FCEEB4</color>
     <color name="colorBlue">#27A9AF</color>
+    <color name="cloudyDay">#BBBBBB</color>
 </resources>

@@ -21,10 +21,10 @@ public class Grunge extends View {
     public static final int WIND_RANDOMIZE_INTERVAL = 300;
     int index = 0;
     private float wind = 10f;
-    float windRanomizerTarget;
+    float windRandomizerTarget;
     long lastWindRandomChange;
-    float windRanomizerEased;
-    private Renderable[] renderables;
+    float windRandomizerEased;
+    private Renderable[] renderables; //add layers of grunge/noise textures
 
     public Grunge(Context context) {
         super(context);
@@ -91,12 +91,12 @@ public class Grunge extends View {
         if (lastWindRandomChange + WIND_RANDOMIZE_INTERVAL < System.currentTimeMillis()) {
             lastWindRandomChange = System.currentTimeMillis();
             float randomSpeedInterval = Math.max(wind / 2, 1);
-            windRanomizerTarget = (float) MathHelper.rand.nextInt((int) randomSpeedInterval) - randomSpeedInterval / 2f;
+            windRandomizerTarget = (float) MathHelper.rand.nextInt((int) randomSpeedInterval) - randomSpeedInterval / 2f;
         }
-        windRanomizerEased += ((windRanomizerTarget - windRanomizerEased) * 4f) * deltaTime;
+        windRandomizerEased += ((windRandomizerTarget - windRandomizerEased) * 4f) * deltaTime;
         for (Renderable renderable : renderables) {
             renderable.draw(canvas);
-            renderable.update(deltaTime, wind + windRanomizerEased);
+            renderable.update(deltaTime, wind + windRandomizerEased);
         }
         invalidate();
     }
