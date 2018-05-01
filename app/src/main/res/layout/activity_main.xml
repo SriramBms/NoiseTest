@@ -20,38 +20,54 @@
             android:background="@drawable/bg_gradient"
             />
     </no.agens.depth.lib.DepthLayout>
+
     <RelativeLayout
         android:id="@+id/login_container"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:paddingTop="40dp"
+        android:paddingBottom="40dp"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:elevation="2dp"
+        android:background="@drawable/rect_grey_border_fill"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:background="@drawable/rect_grey_border"
-        >
+        app:layout_constraintTop_toTopOf="parent">
+
         <EditText
             android:id="@+id/et_username"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
             android:background="@drawable/rect_grey_border"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
             android:fontFamily="sans-serif"
+            android:hint="User Name"
+            android:textCursorDrawable="@color/cloudyDay"
             android:inputType="textEmailAddress"
-            app:layout_marginTopPercent="9%"
-            android:layout_centerHorizontal="true"/>
+            android:textSize="22dp"
+            android:textColor="@color/colorAccent"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp" />
+
         <EditText
             android:id="@+id/et_password"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:background="@drawable/rect_grey_border"
-            android:inputType="textWebPassword"
-            android:fontFamily="sans-serif"
+            android:layout_height="50dp"
             android:layout_below="@id/et_username"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
-            android:layout_marginTop="5dp"
-            android:layout_centerHorizontal="true"/>
+            android:layout_centerHorizontal="true"
+            android:hint="Password"
+            android:textSize="22dp"
+            android:textColor="@color/colorAccent"
+            android:textCursorDrawable="@color/cloudyDay"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/rect_grey_border"
+            android:fontFamily="sans-serif"
+            android:inputType="textWebPassword"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp" />
     </RelativeLayout>
 </android.support.constraint.ConstraintLayout>

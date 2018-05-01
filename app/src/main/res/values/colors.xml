@@ -7,4 +7,7 @@
     <color name="colorLighter">#FCEEB4</color>
     <color name="colorBlue">#27A9AF</color>
     <color name="cloudyDay">#BBBBBB</color>
+    <color name="dispersedSmoke">#FBFBFB</color>
+    <color name="whiteTransparent05">#88FFFFFF</color>
+    <color name="whiteTransparent08">#ddFFFFFF</color>
 </resources>
