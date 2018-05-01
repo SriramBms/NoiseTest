@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <no.agens.depth.lib.DepthLayout
+        android:id="@+id/root_dl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:layerType="hardware"
+        >
+        <com.yourfavoriteone.noisebackground.effects.Grunge
+            android:id="@+id/GrungeBg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:background="@drawable/bg_gradient"
+            />
+    </no.agens.depth.lib.DepthLayout>
+    <View
+        android:id="@+id/login_container"
+        />
+</android.support.constraint.ConstraintLayout>
