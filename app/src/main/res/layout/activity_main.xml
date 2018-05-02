@@ -17,7 +17,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
-            android:background="@drawable/bg_gradient"
+            android:background="@drawable/bg_animated"
             />
     </no.agens.depth.lib.DepthLayout>
 
@@ -37,18 +37,32 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Your Favorite One"
+            android:textColor="@color/colorPrimaryDark"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="12sp"
+            android:autoSizeMaxTextSize="100sp"
+            android:autoSizeStepGranularity="2sp"
+            android:maxLines="1"
+            android:textAlignment="center"/>
         <EditText
             android:id="@+id/et_username"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_centerHorizontal="true"
+            android:layout_below="@id/title"
+            android:layout_marginTop="30dp"
             android:background="@drawable/rect_grey_border"
             android:fontFamily="sans-serif"
             android:hint="User Name"
+            android:textStyle="italic"
             android:textCursorDrawable="@color/cloudyDay"
             android:inputType="textEmailAddress"
-            android:textSize="22dp"
+            android:textSize="18sp"
             android:textColor="@color/colorAccent"
             android:paddingLeft="20dp"
             android:paddingRight="20dp" />
@@ -60,13 +74,31 @@
             android:layout_below="@id/et_username"
             android:layout_centerHorizontal="true"
             android:hint="Password"
-            android:textSize="22dp"
+            android:textStyle="italic"
+            android:textSize="18sp"
             android:textColor="@color/colorAccent"
             android:textCursorDrawable="@color/cloudyDay"
             android:layout_marginTop="15dp"
             android:background="@drawable/rect_grey_border"
             android:fontFamily="sans-serif"
             android:inputType="textWebPassword"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp" />
+        <TextView
+            android:id="@+id/button_submit"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/et_password"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/rect_magenta_border_fill"
+            android:text="SUBMIT"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textCursorDrawable="@color/cloudyDay"
+            android:inputType="textEmailAddress"
+            android:textSize="24sp"
+            android:textColor="@android:color/white"
             android:paddingLeft="20dp"
             android:paddingRight="20dp" />
     </RelativeLayout>

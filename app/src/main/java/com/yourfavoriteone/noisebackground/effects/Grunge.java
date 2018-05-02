@@ -58,7 +58,7 @@ public class Grunge extends View {
     private void addGrunge(Bitmap grunge) {
         NoiseEffect noise = new NoiseEffect(grunge, 100, 0.75f);
         renderables[index] = noise;
-        noise.setNoiseIntensity(0.25f);
+        noise.setNoiseIntensity(0.40f);
         index += 1;
     }
 
